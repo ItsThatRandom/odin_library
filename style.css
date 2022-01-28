@@ -1,17 +1,99 @@
+body {
+    margin: 0;
+    background-image: url("images/lib_bkg.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+/* Card Formatting */
 .cards {
     margin: 5%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    row-gap: 1.5em;
+    justify-content: space-evenly;
+    gap: 1em;
 }
 
 .card {
     display: flex;
-    flex: 0 1 20%;
-    gap: 10%;
-    background-color: aqua;
+    flex: 0 1 25%;
+    background-color: #6a93cb;
+    background-image: linear-gradient(315deg, #6a93cb 0%, #a4bfef 74%);
+    border-radius: 5%;
+    border-style: solid;
+    box-shadow: 5px 5px 0px black;
     padding: 1% 2%;
     justify-content: space-between;
     align-items: center;
+    
+}
+
+.card div {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.card div button {
+    display: flex;
+    align-self:flex-end;
+    padding: 0;
+    margin: 0;
+    border: none;
+    background: none;
+    font-size: large;
+}
+
+.card div button:hover {
+    font-weight: 900;
+    text-shadow: 0 0 2px white;    
+}
+
+[data-read=true] {
+    opacity: 100%;
+}
+
+[data-read=false] {
+    opacity: 25%;
+}
+
+/* Overlay/Form Formatting */
+.overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .5);
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 30%;
+    padding: 2% 4%;
+    background-color: silver;
+    border-radius: 5%;
+}
+
+form div {
+    display: flex;
+    align-content: center;
+    gap: 5%;
+}
+
+input[type=submit] {
+    width: 50%;
+    margin: auto;
+}
+
+input[type=checkbox] {
+    transform: scale(1.5);
 }
