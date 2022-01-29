@@ -8,24 +8,25 @@
     <link rel=stylesheet href="style.css">
 </head>
 <body>
+    <section class="legend">
+        <button id="addButton">Add Book</button>
+    </section>
     
-    <button id="newBook">Add book</button>
     <section class="cards">
 
     </section>
     <section class="overlay">
         <form>
             <p>Book Title?</p>
-            <input type="text">
+            <input type="text" id="title" required pattern="\S(.*\S)?" title="Text only, no whitespace at start or end">
             <p>Book Author?</p>
-            <input type="text">
+            <input type="text" id="author" required pattern="\S(.*\S)?" title="Text only, no whitespace at start or end">
             <p>Page Count?</p>
-            <input type="text">
+            <input type="number" id="pages" required>
             <div>
                 <p>Read?</p>
-                <input type="checkbox">
+                <input type="checkbox" id="read">
             </div>
-            
             <input type="submit">
         </form>
     </section>
